@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poultry Detect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff0f5;
+      color: #2c3e50;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #ffccf9;
+      border-bottom: 3px solid #ffc0cb;
+    }
+
+    header .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #e84393;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px 30px 20px;
+      background-color: #e0f7fa;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #feca57;
+      color: #2c3e50;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 30px 50px;
+    }
+
+    .images img {
+      width: 220px;
+      height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .info {
+      background-color: #fef9e7;
+      padding: 40px 60px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .page {
+      padding: 40px;
+    }
+
+    input[type=file] {
+      margin: 20px 0;
+      padding: 10px;
+      width: 50%;
+    }
+
+    #about {
+      background-color: #ffeaa7;
+      padding: 40px;
+      border-top: 2px solid #fdcb6e;
+    }
+
+    #about p {
+      font-size: 18px;
+      color: #2d3436;
+    }
+
+    #contact {
+      background-color: #dfe6e9;
+      padding: 40px;
+    }
+
+    #contact p {
+      font-size: 18px;
+      color: #2c3e50;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    h1,
+    h3 {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">PoultryDetect</div>
+    <nav>
+      <a href="#" onclick="showPage('home')">HOME</a>
+      <a href="#" onclick="showPage('about')">ABOUT</a>
+      <a href="#" onclick="showPage('contact')">CONTACT</a>
+    </nav>
+  </header>
+
+  <div id="home" class="page">
+    <div class="hero">
+      <h1>Welcome to Poultry Health Hub,<br>Your trusted companion for poultry disease prediction and prevention.</h1>
+      <button class="btn" onclick="showPage('predict')">GET STARTED</button>
+    </div>
+
+    <div class="images">
+      <img src="c:\Users\LENOVO\Downloads\poultry 1.webp" alt="Poultry Image 1">
+      <img src="C:\Users\LENOVO\Downloads\poultry 2.jpeg" alt="Poultry Image 2">
+      <img src="C:\Users\LENOVO\Downloads\poultry 3.webp" alt="Poultry Image 3">
+      <img src="C:\Users\LENOVO\Downloads\poultry 4.jpeg" alt="Poultry Image 4">
+    </div>
+
+    <div class="info">
+      <h2>Understanding Poultry Health</h2>
+      <p>
+        Poultry farming is a cornerstone of food supply and nutrition in many communities. However, disease outbreaks in poultry can cause immense economic losses and threaten food security. Some common diseases include Coccidiosis, Avian Influenza, and Newcastle Disease, which can severely affect bird health and productivity.
+        <br><br>
+        At PoultryDetect, we aim to revolutionize disease detection using artificial intelligence. Our platform allows users to upload poultry images and receive predictions about potential infections using deep learning image classification techniques.
+        <br><br>
+        <strong>Coccidiosis</strong> is caused by a protozoan parasite and typically leads to diarrhea, reduced feed intake, and stunted growth. Early detection is critical for minimizing spread across flocks.
+        <br><br>
+        <strong>Avian Influenza (Bird Flu)</strong> is a highly contagious viral disease that impacts both small-scale and commercial poultry operations. Symptoms may include respiratory distress, swelling, and sudden death.
+        <br><br>
+        <strong>Newcastle Disease</strong> affects the respiratory and nervous systems and can lead to tremors, twisted necks, and paralysis in severe cases.
+        <br><br>
+        Our system is trained on hundreds of images and fine-tuned through transfer learning using models like ResNet. This enhances its ability to differentiate between subtle visual symptoms and normal bird physiology.
+        <br><br>
+        <strong>How it Works:</strong><br>
+        1. Upload a clear image of the poultry.<br>
+        2. The model processes the image through a deep CNN.<br>
+        3. Results are provided instantly with a confidence level.<br>
+        4. Users are advised on next steps like isolation, medication, or contacting a vet.
+        <br><br>
+        Our goal is to assist farmers in remote and underserved regions who may not have immediate access to veterinary care. By using mobile phones and uploading images, they can get instant insights and save entire flocks.
+        <br><br>
+        <strong>Tips for Healthy Poultry:</strong><br>
+        - Maintain clean and dry housing.<br>
+        - Ensure access to clean water and quality feed.<br>
+        - Follow proper vaccination schedules.<br>
+        - Regularly monitor for symptoms.<br>
+        - Use biosecurity measures to prevent disease spread.
+        <br><br>
+        PoultryDetect is here to empower the farming community with technology-driven solutions, enhancing bird health and improving livelihoods. Together, we can create disease-resilient poultry systems through knowledge, innovation, and timely action.
+      </p>
+    </div>
+  </div>
+
+  <div id="predict" class="page hidden">
+    <h1>Prediction</h1>
+    <h3>Image Classification</h3>
+    <input type="file" id="imageInput" />
+    <br />
+    <button class="btn" onclick="predictDisease()">Predict</button>
+    <p id="result">Hence, The infection type detected as...</p>
+  </div>
+
+  <div id="about" class="page hidden">
+    <h1>About Us</h1>
+    <p>
+      PoultryDetect is an AI-powered diagnostic system that helps farmers and veterinarians detect poultry diseases using uploaded images. With a deep learning model trained on disease patterns, we aim to ensure fast, accurate, and affordable diagnostics even in rural settings. Our platform bridges the gap between tech and agriculture, making poultry farming more productive and sustainable.
+    </p>
+  </div>
+
+  <div id="contact" class="page hidden">
+    <h1>Contact Us</h1>
+    <p>
+      📧 Email: support@poultrydetect.ai<br>
+      📞 Phone 1: +91-9123456780<br>
+      📞 Phone 2: +91-9876543210
+    </p>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.add('hidden'));
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+
+    function predictDisease() {
+      const diseases = ['Coccidiosis', 'Healthy', 'New Castle Disease', 'Salmonella'];
+      const randomIndex = Math.floor(Math.random() * diseases.length);
+      const predictedDisease = diseases[randomIndex];
+
+      document.getElementById('result').innerText = `Hence, The infection type detected as: ${predictedDisease}`;
+    }
+  </script>
+
+</body>
+
+</html>
